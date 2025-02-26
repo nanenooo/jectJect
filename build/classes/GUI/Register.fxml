@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="600.0" prefWidth="500.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="RegisterController">
+   <children>
+      <Button fx:id="regButton_SignUp" layoutX="135.0" layoutY="456.0" mnemonicParsing="false" onMouseClicked="#RegisterAndSwitchToLogin" prefHeight="31.0" prefWidth="58.0" text="Sign Up" />
+      <TextField fx:id="regNname" layoutX="134.0" layoutY="107.0" prefHeight="40.0" prefWidth="230.0" promptText="Name" />
+      <TextField fx:id="regLname" layoutX="134.0" layoutY="163.0" prefHeight="40.0" prefWidth="230.0" promptText="Last Name" />
+      <TextField fx:id="regUsername" layoutX="134.0" layoutY="217.0" prefHeight="40.0" prefWidth="230.0" promptText="Username" />
+      <TextField fx:id="regPass" layoutX="134.0" layoutY="273.0" prefHeight="40.0" prefWidth="230.0" promptText="Username" />
+      <TextField fx:id="regCpass" layoutX="134.0" layoutY="329.0" prefHeight="40.0" prefWidth="230.0" promptText="Username" />
+      <Text fx:id="regText_SignUp" layoutX="135.0" layoutY="72.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sign Up" />
+      <Text fx:id="regText_Title" layoutX="135.0" layoutY="96.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Into the new world of CarCare" />
+      <PasswordField fx:id="regConpassword" layoutX="134.0" layoutY="329.0" prefHeight="40.0" prefWidth="230.0" promptText="Confirm password" />
+      <PasswordField fx:id="regPassword" layoutX="134.0" layoutY="273.0" prefHeight="40.0" prefWidth="230.0" promptText="Password" />
+      <Text fx:id="regText_Privacy" fill="#3674b5" layoutX="135.0" layoutY="392.0" onMouseEntered="#TextOnMouseEntered" onMouseExited="#TextMouseExited" strokeType="OUTSIDE" strokeWidth="0.0" text="Privacy Notice">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Text>
+      <CheckBox fx:id="regCB_Agree" layoutX="134.0" layoutY="404.0" mnemonicParsing="false" text="I agree to Consent Agreement Form" />
+      <Text fx:id="regText_haveACC" layoutX="135.0" layoutY="508.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Already have an account?" />
+      <Text fx:id="regText_Login" fill="#3674b5" layoutX="275.0" layoutY="508.0" onMouseClicked="#SwitchToLogin" onMouseEntered="#TextOnMouseEntered" onMouseExited="#TextMouseExited" strokeType="OUTSIDE" strokeWidth="0.0" text="Login">
+         <font>
+            <Font name="System Bold" size="12.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Text>
+      <TextField fx:id="regPassShow" layoutX="134.0" layoutY="273.0" prefHeight="40.0" prefWidth="230.0" visible="false" />
+      <TextField fx:id="regConPassShow" layoutX="134.0" layoutY="329.0" prefHeight="40.0" prefWidth="230.0" visible="false" />
+      <CheckBox fx:id="regShowPassword" accessibleRole="IMAGE_VIEW" layoutX="339.0" layoutY="284.0" mnemonicParsing="false" onAction="#ShowPassword" />
+      <CheckBox fx:id="regShowConPassword" accessibleRole="IMAGE_VIEW" layoutX="339.0" layoutY="340.0" mnemonicParsing="false" onAction="#ShowPassword" />
+   </children>
+</AnchorPane>
