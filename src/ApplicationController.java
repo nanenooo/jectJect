@@ -9,8 +9,14 @@ import java.time.LocalDate;
 import java.time.YearMonth;
 import java.time.DayOfWeek;
 import javafx.scene.paint.Color;
+import javax.swing.*;
+import javafx.embed.swing.SwingNode;
+
 
 public class ApplicationController {
+    
+    private JInternalFrame frame;
+    private JDesktopPane DPane;
 
     @FXML
     private Text Button_Booking;
@@ -50,6 +56,9 @@ public class ApplicationController {
 
     @FXML
     private AnchorPane PageServiceMenu;
+    
+    @FXML
+    private AnchorPane desktopPaneContainer;
 
     @FXML private Text d0_0, d0_1, d0_2, d0_3, d0_4, d0_5, d0_6;
     @FXML private Text d1_0, d1_1, d1_2, d1_3, d1_4, d1_5, d1_6;
@@ -121,7 +130,7 @@ public class ApplicationController {
         for (int row = 0; row < 6; row++) {
             for (int col = 0; col < 7; col++) {
                 final Text dayText = dayTexts[row][col];
-//                dayText.setOnMouseClicked(event -> DayClick(dayText));
+                dayText.setOnMouseClicked(event -> DayClick(dayText));
             }
         }
     }
@@ -149,9 +158,27 @@ public class ApplicationController {
         }
     }
     
-    private void DayClick(MouseEvent event) {
-        
+    private void DayClick(Text dayText) {
+    String day = dayText.getText();
+    if (!day.isEmpty()) {
+        SwingUtilities.invokeLater(() -> {
+            frame = new JInternalFrame("Day X", true, true, true, true);
+            DPane = new JDesktopPane();
+            frame.setSize(300, 500);
+            DPane.add(frame);
+            frame.setVisible(true);
+            DPane.setVisible(true);
+            
+            
+            SwingNode swingNode = new SwingNode();
+            swingNode.setContent(DPane);
+            desktopPaneContainer.getChildren().add(swingNode);
+        });
+    } else {
+        System.out.println("Cannot click on empty date");
+        }
     }
+    
     @FXML
     void ShowNextMonth(MouseEvent event) {
         YearMonth nextMonth = currentYearMonth.plusMonths(1);
