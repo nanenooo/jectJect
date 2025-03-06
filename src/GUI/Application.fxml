@@ -1,0 +1,407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.StackPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<StackPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ApplicationController">
+   <children>
+      <AnchorPane prefHeight="600.0" prefWidth="900.0">
+         <children>
+            <BorderPane prefHeight="600.0" prefWidth="900.0">
+               <top>
+                  <AnchorPane prefHeight="100.0" prefWidth="900.0" style="-fx-background-color: #2D336B;" BorderPane.alignment="CENTER">
+                     <children>
+                        <Button fx:id="Button_Quit" layoutX="817.0" layoutY="30.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="40.0" text="Button" />
+                     </children>
+                  </AnchorPane>
+               </top>
+               <left>
+                  <VBox prefHeight="500.0" prefWidth="210.0" style="-fx-background-color: #F9F7F7;" BorderPane.alignment="CENTER">
+                     <children>
+                        <AnchorPane prefHeight="130.0" prefWidth="250.0">
+                           <children>
+                              <ImageView fx:id="Logo" fitHeight="114.0" fitWidth="155.0" layoutX="31.0" layoutY="8.0" pickOnBounds="true" preserveRatio="true">
+                                 <image>
+                                    <Image url="@../../../../../logo.png" />
+                                 </image>
+                              </ImageView>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="20.0" prefWidth="250.0" />
+                        <AnchorPane prefHeight="50.0" prefWidth="250.0">
+                           <children>
+                              <Text fx:id="Button_Profile" layoutX="28.0" layoutY="32.0" onMouseClicked="#SwitchToProfile" onMouseEntered="#TextOnMouseEntered" onMouseExited="#TextMouseExited" strokeType="OUTSIDE" strokeWidth="0.0" text="Profile">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="50.0" prefWidth="250.0">
+                           <children>
+                              <Text fx:id="Button_Booking" layoutX="28.0" layoutY="32.0" onMouseClicked="#SwitchToBooking" onMouseEntered="#TextOnMouseEntered" onMouseExited="#TextMouseExited" strokeType="OUTSIDE" strokeWidth="0.0" text="Booking Service">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="50.0" prefWidth="250.0">
+                           <children>
+                              <Text fx:id="Button_Service" layoutX="28.0" layoutY="32.0" onMouseClicked="#SwitchToService" onMouseEntered="#TextOnMouseEntered" onMouseExited="#TextMouseExited" strokeType="OUTSIDE" strokeWidth="0.0" text="Service Menu">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="50.0" prefWidth="250.0">
+                           <children>
+                              <Text fx:id="Button_Dashborad" layoutX="28.0" layoutY="32.0" onMouseClicked="#SwitchToDashborad" onMouseEntered="#TextOnMouseEntered" onMouseExited="#TextMouseExited" strokeType="OUTSIDE" strokeWidth="0.0" text="Dashborad">
+                                 <font>
+                                    <Font size="18.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane prefHeight="50.0" prefWidth="250.0" />
+                        <AnchorPane prefHeight="50.0" prefWidth="250.0" />
+                        <AnchorPane prefHeight="50.0" prefWidth="250.0">
+                           <children>
+                              <Text fx:id="Button_Logout" layoutX="28.0" layoutY="23.0" onMouseEntered="#TextOnMouseEntered" onMouseExited="#TextMouseExited" strokeType="OUTSIDE" strokeWidth="0.0" text="Logout">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Text>
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </VBox>
+               </left>
+               <center>
+                  <BorderPane prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #FFF2AF;" BorderPane.alignment="CENTER">
+                     <center>
+                        <StackPane prefHeight="150.0" prefWidth="200.0" style="-fx-background-color: #CBDCEB;" BorderPane.alignment="CENTER">
+                           <children>
+                              <AnchorPane fx:id="PageProfile" prefHeight="330.0" prefWidth="436.0" visible="false">
+                                 <children>
+                                    <Pane layoutX="19.0" layoutY="36.0" prefHeight="130.0" prefWidth="650.0" style="-fx-background-color: #f5f5f5;" />
+                                 </children>
+                              </AnchorPane>
+                              <AnchorPane fx:id="PageDashborad" prefHeight="330.0" prefWidth="436.0" />
+                              <AnchorPane fx:id="PageServiceMenu" prefHeight="330.0" prefWidth="436.0" />
+                              <AnchorPane fx:id="PageBookingService" prefHeight="330.0" prefWidth="436.0">
+                                 <children>
+                                    <AnchorPane layoutX="13.0" layoutY="39.0" prefHeight="438.0" prefWidth="662.0" style="-fx-background-color: white;">
+                                       <children>
+                                          <GridPane layoutX="58.0" layoutY="104.0" prefHeight="305.0" prefWidth="546.0">
+                                            <columnConstraints>
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                            </columnConstraints>
+                                            <rowConstraints>
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                            </rowConstraints>
+                                             <children>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;">
+                                                   <children>
+                                                      <Text layoutX="26.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sunday" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="1">
+                                                   <children>
+                                                      <Text layoutX="26.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Monday" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="2">
+                                                   <children>
+                                                      <Text layoutX="24.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Tuesday" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="3">
+                                                   <children>
+                                                      <Text layoutX="15.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Wednesday" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="4">
+                                                   <children>
+                                                      <Text layoutX="21.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Thursday" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="5">
+                                                   <children>
+                                                      <Text layoutX="30.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Friday" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="6">
+                                                   <children>
+                                                      <Text layoutX="22.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Saturday" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                                                   <children>
+                                                      <Text fx:id="d0_1" layoutX="28.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane layoutX="10.0" layoutY="10.0" prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.rowIndex="1">
+                                                   <children>
+                                                      <Text fx:id="d0_0" layoutX="28.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                                                   <children>
+                                                      <Text fx:id="d0_2" layoutX="33.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                                                   <children>
+                                                      <Text fx:id="d0_3" layoutX="34.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                                                   <children>
+                                                      <Text fx:id="d0_4" layoutX="33.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="6" GridPane.rowIndex="1">
+                                                   <children>
+                                                      <Text fx:id="d0_6" layoutX="35.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="1">
+                                                   <children>
+                                                      <Text fx:id="d0_5" layoutX="35.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="6" GridPane.rowIndex="2">
+                                                   <children>
+                                                      <Text fx:id="d1_6" layoutX="37.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="2">
+                                                   <children>
+                                                      <Text fx:id="d1_5" layoutX="34.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="4" GridPane.rowIndex="2">
+                                                   <children>
+                                                      <Text fx:id="d1_4" layoutX="31.0" layoutY="28.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="2">
+                                                   <children>
+                                                      <Text fx:id="d1_3" layoutX="34.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="2">
+                                                   <children>
+                                                      <Text fx:id="d1_2" layoutX="34.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="2">
+                                                   <children>
+                                                      <Text fx:id="d1_1" layoutX="35.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.rowIndex="2">
+                                                   <children>
+                                                      <Text fx:id="d1_0" layoutX="34.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.rowIndex="3">
+                                                   <children>
+                                                      <Text fx:id="d2_0" layoutX="34.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="6" GridPane.rowIndex="3">
+                                                   <children>
+                                                      <Text fx:id="d2_6" layoutX="34.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="3">
+                                                   <children>
+                                                      <Text fx:id="d2_5" layoutX="28.0" layoutY="27.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="4" GridPane.rowIndex="3">
+                                                   <children>
+                                                      <Text fx:id="d2_4" layoutX="34.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="3">
+                                                   <children>
+                                                      <Text fx:id="d2_3" layoutX="34.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="3">
+                                                   <children>
+                                                      <Text fx:id="d2_2" layoutX="34.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="3">
+                                                   <children>
+                                                      <Text fx:id="d2_1" layoutX="33.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="6" GridPane.rowIndex="4">
+                                                   <children>
+                                                      <Text fx:id="d3_6" layoutX="36.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="4">
+                                                   <children>
+                                                      <Text fx:id="d3_5" layoutX="33.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="4" GridPane.rowIndex="4">
+                                                   <children>
+                                                      <Text fx:id="d3_4" layoutX="33.0" layoutY="35.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="4">
+                                                   <children>
+                                                      <Text fx:id="d3_3" layoutX="34.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="4">
+                                                   <children>
+                                                      <Text fx:id="d3_2" layoutX="34.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="4">
+                                                   <children>
+                                                      <Text fx:id="d3_1" layoutX="35.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.rowIndex="4">
+                                                   <children>
+                                                      <Text fx:id="d3_0" layoutX="36.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="6" GridPane.rowIndex="5">
+                                                   <children>
+                                                      <Text fx:id="d4_6" layoutX="37.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="5">
+                                                   <children>
+                                                      <Text fx:id="d4_5" layoutX="35.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="4" GridPane.rowIndex="5">
+                                                   <children>
+                                                      <Text fx:id="d4_4" layoutX="34.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="5">
+                                                   <children>
+                                                      <Text fx:id="d4_3" layoutX="34.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="5">
+                                                   <children>
+                                                      <Text fx:id="d4_2" layoutX="34.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="5">
+                                                   <children>
+                                                      <Text fx:id="d4_1" layoutX="37.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.rowIndex="5">
+                                                   <children>
+                                                      <Text fx:id="d4_0" layoutX="38.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="6" GridPane.rowIndex="6">
+                                                   <children>
+                                                      <Text fx:id="d5_6" layoutX="39.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="5" GridPane.rowIndex="6">
+                                                   <children>
+                                                      <Text fx:id="d5_5" layoutX="40.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="4" GridPane.rowIndex="6">
+                                                   <children>
+                                                      <Text fx:id="d5_4" layoutX="33.0" layoutY="32.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="3" GridPane.rowIndex="6">
+                                                   <children>
+                                                      <Text fx:id="d5_3" layoutX="34.0" layoutY="31.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="2" GridPane.rowIndex="6">
+                                                   <children>
+                                                      <Text fx:id="d5_2" layoutX="34.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.columnIndex="1" GridPane.rowIndex="6">
+                                                   <children>
+                                                      <Text fx:id="d5_1" layoutX="38.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                                <Pane prefHeight="200.0" prefWidth="200.0" style="-fx-border-color: black;" GridPane.rowIndex="6">
+                                                   <children>
+                                                      <Text fx:id="d5_0" layoutX="37.0" layoutY="33.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Text" />
+                                                   </children>
+                                                </Pane>
+                                             </children>
+                                          </GridPane>
+                                          <Pane layoutX="231.0" layoutY="62.0" prefHeight="30.0" prefWidth="200.0" style="-fx-background-color: blue;" />
+                                          <Button fx:id="Button_Next" layoutX="543.0" layoutY="64.0" mnemonicParsing="false" onMouseClicked="#ShowNextMonth" text="Button" />
+                                          <Button fx:id="Button_Prev" layoutX="76.0" layoutY="64.0" mnemonicParsing="false" onMouseClicked="#ShowPrevMonth" text="Button" />
+                                       </children>
+                                    </AnchorPane>
+                                 </children>
+                              </AnchorPane>
+                           </children>
+                        </StackPane>
+                     </center>
+                  </BorderPane>
+               </center>
+            </BorderPane>
+         </children>
+      </AnchorPane>
+   </children>
+</StackPane>
